@@ -9,7 +9,11 @@ html {
     min-height: 100%;
 }
 
-#pageOne #pageTwo #pageThree .ui-content{
+* {
+    background-color: white;
+}
+
+#pageOne, #pageTwo, #pageThree, .ui-content{
     background-color: white !important;
 }
 
@@ -28,7 +32,8 @@ h2 {
     width: 70vw;
     height: 70vw;
     border-radius: 35vw;
-    background-color: lightgray;
+    border: 1px solid gray;
+    background: url('../img/heartbeath.png');
     margin: auto;
 }
 
