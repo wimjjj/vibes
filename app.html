@@ -19,7 +19,6 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
     <link rel="stylesheet" href="/css/main.css" type="text/css">
-
 </head>
 <body>
 
@@ -90,10 +89,20 @@
 <div data-role="page" id="pageThree">
 
     <div data-role="main" class="ui-content">
-        <div id="msgs"></div>
+        <h1>Chat</h1>
+        <div id="msgs">
+            <span class="msg-left">hello</span>
+            <br>
+            <br>
+            <span class="msg-right">hello</span>
+            <br>
+            <br>
+            <br>
+            <span class="msg-right">How are you doing?</span>
+        </div>
+
         <form name="message" action="" id="chatbox">
-            <input name="usermsg" type="text" id="usermsg" size="63" />
-            <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+            <input name="usermsg" type="text" id="usermsg">
         </form>
     </div>
 
@@ -134,11 +143,6 @@
         }
         return false;
     });
-</script>
-
-
-<script>
-    if(!document.referrer.search('app')) location.reload();
 </script>
 </body>
 </html>

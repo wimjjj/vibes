@@ -54,20 +54,20 @@ h2 {
 }
 
 #advice {
-    margin-top: 2vh;
+    margin-top: -3vh;
 }
 
 #adviceText {
     overflow: auto;
     overflow-y: scroll;
-    height: 28vh;
+    height: 30vh;
 }
 
 #recommended{
     position: absolute;
     bottom: 8vh;
     width: 100%;
-    height: 10vh;
+    height: 11vh;
 }
 .recommendedItem {
     float: left;
@@ -76,29 +76,43 @@ h2 {
 }
 
 /*Page Three*/
-#msgs {
-    width: 90vw;
-    height: 70vh;
-    border: 1px solid gray;
+.msg-left {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    max-width: 75%;
+    font-size: 2em;
+    margin-left: 1vw;
     border-radius: 5px;
+    background-color: lightgreen;
 }
 
+.msg-right {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    max-width: 75%;
+    font-size: 2em;
+    margin-right: 1vw;
+    border-radius: 5px;
+    background-color: lightblue;
+    float: right;
+}
 
 #chatbox {
-    text-align:left;
-    margin:0 auto;
-    margin-bottom:25px;
-    padding:10px;
-    background:#fff;
-    width:90%;
-    overflow:auto;
+    position: absolute;
+    bottom: 10vh;
+    width: 91vw;
 }
-  
-#usermsg {
-    width:100%;
-    border:1px solid #ACD8F0; }
-  
-#submit { width: 60px; }
+
+#usermsg{
+    width: 100%;
+}
+
+#submitMsg {
+    float: right;
+    width: 10vw;
+}
 
 .footer {
     position: absolute;
