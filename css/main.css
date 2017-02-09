@@ -1,0 +1,41 @@
+/*ALL*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+#pageOne #pageTwo #pageThree .ui-content{
+    background-color: white !important;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+/*PAGE ONE*/
+#circleInfo {
+    width: 70vw;
+    height: 70vw;
+    border-radius: 35vw;
+    background-color: lightgray;
+    margin: auto;
+}
+
+#circleInfo {
+    text-align: center;
+    line-height: 8vh;
+}
+
+/*PAGE TWO*/
+#graphImg{
+    width: 90vw;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.footer {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+}
