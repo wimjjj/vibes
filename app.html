@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Include jQuery Mobile stylesheets -->
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" type="text/css">
 
     <!-- Include the jQuery library -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -18,37 +18,11 @@
     <!-- Include the jQuery Mobile library -->
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
 
 </head>
 <body>
-<!--SWIPING-->
-<script>
-    $(document).on('swipeleft', '.ui-page', function(event){
-        if(event.handled !== true) // This will prevent event triggering more then once
-        {
-            var nextpage = $.mobile.activePage.next('[data-role="page"]');
-            // swipe using id of next page if exists
-            if (nextpage.length > 0) {
-                $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
-            }
-            event.handled = true;
-        }
-        return false;
-    });
 
-    $(document).on('swiperight', '.ui-page', function(event){
-        if(event.handled !== true) // This will prevent event triggering more then once
-        {
-            var prevpage = $(this).prev('[data-role="page"]');
-            if (prevpage.length > 0) {
-                $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
-            }
-            event.handled = true;
-        }
-        return false;
-    });
-</script>
 
 <!--PAGE ONE-->
 <div data-role="page" id="pageOne">
@@ -61,6 +35,7 @@
         </div>
 
         <div id="stressLevel">
+            <h2>Your Stresslevel</h2>
             <p>----</p>
         </div>
     </div>
@@ -130,6 +105,34 @@
         </div>
     </div>
 </div>
+
+<!--SWIPING-->
+<script>
+    $(document).on('swipeleft', '.ui-page', function(event){
+        if(event.handled !== true) // This will prevent event triggering more then once
+        {
+            var nextpage = $.mobile.activePage.next('[data-role="page"]');
+            // swipe using id of next page if exists
+            if (nextpage.length > 0) {
+                $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
+            }
+            event.handled = true;
+        }
+        return false;
+    });
+
+    $(document).on('swiperight', '.ui-page', function(event){
+        if(event.handled !== true) // This will prevent event triggering more then once
+        {
+            var prevpage = $(this).prev('[data-role="page"]');
+            if (prevpage.length > 0) {
+                $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
+            }
+            event.handled = true;
+        }
+        return false;
+    });
+</script>
 
 </body>
 </html>

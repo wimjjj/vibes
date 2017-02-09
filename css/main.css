@@ -13,9 +13,9 @@ html {
     background-color: white;
 }
 
-#pageOne, #pageTwo, #pageThree, .ui-content{
-    background-color: white !important;
-}
+    #pageOne, #pageTwo, #pageThree, .ui-content{
+        background-color: white !important;
+    }
 
 h1 {
     text-align: center;
@@ -40,6 +40,10 @@ h2 {
 #circleInfo {
     text-align: center;
     line-height: 8vh;
+}
+
+#stressLevel {
+    margin-top: 2vh;
 }
 
 /*PAGE TWO*/
