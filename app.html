@@ -90,14 +90,11 @@
 <div data-role="page" id="pageThree">
 
     <div data-role="main" class="ui-content">
-        <div id="chatbox">
-
-        </div>
-    <form name="message" action="">
-        <input name="usermsg" type="text" id="usermsg" size="63" />
-        <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
-    </form>
-
+        <div id="msgs"></div>
+        <form name="message" action="" id="chatbox">
+            <input name="usermsg" type="text" id="usermsg" size="63" />
+            <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+        </form>
     </div>
 
     <div data-role="footer" class="footer">
@@ -139,5 +136,9 @@
     });
 </script>
 
+
+<script>
+    if(!document.referrer.search('app')) location.reload();
+</script>
 </body>
 </html>
