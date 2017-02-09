@@ -1,0 +1,42 @@
+/*ALL*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+body * {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+ul li {
+    list-style-type: none;
+}
+* {
+    background-color: #ffffff;
+}
+
+#loginfields{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.buttons {
+    width: 100%;
+    margin: 10px;
+}
+
+div#wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.buttons a {
+    text-decoration: none;
+
+}
+
+.buttons li {
+    display:inline-block;
+}
