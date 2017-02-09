@@ -22,6 +22,34 @@
 
 </head>
 <body>
+<!--SWIPING-->
+<script>
+    $(document).on('swipeleft', '.ui-page', function(event){
+        if(event.handled !== true) // This will prevent event triggering more then once
+        {
+            var nextpage = $.mobile.activePage.next('[data-role="page"]');
+            // swipe using id of next page if exists
+            if (nextpage.length > 0) {
+                $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
+            }
+            event.handled = true;
+        }
+        return false;
+    });
+
+    $(document).on('swiperight', '.ui-page', function(event){
+        if(event.handled !== true) // This will prevent event triggering more then once
+        {
+            var prevpage = $(this).prev('[data-role="page"]');
+            if (prevpage.length > 0) {
+                $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
+            }
+            event.handled = true;
+        }
+        return false;
+    });
+</script>
+
 <!--PAGE ONE-->
 <div data-role="page" id="pageOne">
 
@@ -40,7 +68,7 @@
     <div data-role="footer" class="footer">
         <div data-role="navbar">
             <ul>
-                <li><a href="#pageOne">page1</a></li>
+                <li><a href="#pageOne" class="ui-btn-active ui-state-persist">page1</a></li>
                 <li><a href="#pageTwo" data-transition="slide">page2</a></li>
                 <li><a href="#pageThree" data-transition="slide" data-direction="reverse">page3</a></li>
             </ul>
@@ -57,13 +85,18 @@
         </div>
 
         <div id="advice">
+            <h2>Advice</h2>
 
+            <p id="adviceText">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+            </p>
         </div>
 
         <div id="recommended">
-            <a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-notext">Search</a>
-            <a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-notext">Search</a>
-            <a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-notext">Search</a>
+            <h2>Recommended Exercises</h2>
+            <a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-notext recommendedItem">Search</a>
+            <a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-notext recommendedItem">Search</a>
+            <a href="#anylink" class="ui-btn ui-icon-search ui-btn-icon-notext recommendedItem">Search</a>
         </div>
     </div>
 
@@ -71,7 +104,7 @@
         <div data-role="navbar">
             <ul>
                 <li><a href="#pageOne" data-transition="slide" data-direction="reverse">page1</a></li>
-                <li><a href="#pageTwo">page2</a></li>
+                <li><a href="#pageTwo" class="ui-btn-active ui-state-persist">page2</a></li>
                 <li><a href="#pageThree" data-transition="slide">page3</a></li>
             </ul>
         </div>
@@ -92,7 +125,7 @@
             <ul>
                 <li><a href="#pageOne" data-transition="slide">page1</a></li>
                 <li><a href="#pageTwo" data-transition="slide" data-direction="reverse">page2</a></li>
-                <li><a href="#pageThree">page3</a></li>
+                <li><a href="#pageThree" class="ui-btn-active ui-state-persist">page3</a></li>
             </ul>
         </div>
     </div>
